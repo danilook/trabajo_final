@@ -11,4 +11,5 @@ class Trabajo (models.Model) :
     class Meta:
         verbose_name = 'Trabajo'
         verbose_name_plural = 'Trabajos'
-        ordering = ['nombre']
+        ordering = ['estado']
+
