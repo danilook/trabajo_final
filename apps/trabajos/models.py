@@ -15,3 +15,9 @@ class Trabajo (models.Model) :
 
     def __str__(self):
         return self.tipo_trabajo
+
+class Presupuesto (models.Model):
+    id_presupuesto = models.AutoField (primary_key= True)
+    fecha_emision = models.DateField (blank= False, null= False)
+    detalles = models.CharField ('Detalles', max_length= 200 , blank= False, null= False)
+

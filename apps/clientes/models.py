@@ -20,3 +20,12 @@ class Cliente (Persona) :
 
    def  __str__(self):
       return self.nombre  
+
+class Motovehiculo (models.Model):
+   id_motovehiculo = models.AutoField (primary_key= True)
+   patente = models.IntegerField () 
+   tipo_motovehiculo = models.CharField ('Tipo del motovehiculo' , max_length= 200 , blank= False , null= False)
+   cilindrada = models.IntegerField ()
+   trasmision = models.CharField ('Trasmision del motovehiculo', max_length= 200 , blank= False, null= False)
+   color = models.CharField ('Color del motovehicuio', max_length= 100 , blank= False , null= False)   
+     
