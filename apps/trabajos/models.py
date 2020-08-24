@@ -13,3 +13,5 @@ class Trabajo (models.Model) :
         verbose_name_plural = 'Trabajos'
         ordering = ['estado']
 
+    def __str__(self):
+        return self.tipo_trabajo

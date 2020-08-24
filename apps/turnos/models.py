@@ -9,3 +9,6 @@ class Turno (models.Model):
         verbose_name = 'Turno'
         verbose_name_plurak = 'Turnos'
         ordering = ['fecha_turno']
+
+    def __str__(self):
+        return self.tipo_turno    

@@ -11,3 +11,11 @@ class Empleado(models.Model):
   fecha_alta = models.DateField(blank = False, null = False)
   reputacion = models.IntegerField ()
 
+  class meta:
+    verbose_name = 'Empleado'
+    verbose_name_plural = 'Empleados'
+    ordering = ['nombre']
+
+  def __str__(self):
+    return self.nombre 
+       
