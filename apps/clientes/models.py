@@ -23,9 +23,11 @@ class Cliente (Persona) :
 
 class Motovehiculo (models.Model):
    id_motovehiculo = models.AutoField (primary_key= True)
-   patente = models.IntegerField () 
-   tipo_motovehiculo = models.CharField ('Tipo del motovehiculo' , max_length= 200 , blank= False , null= False)
+   patente = models.CharField ('Patente',default="" ,max_length= 100 , blank= False , null= False) 
+   tipo_motovehiculo = models.CharField ('Tipo del motovehiculo' ,default= "", max_length= 200 , blank= False , null= False)
    cilindrada = models.IntegerField ()
-   trasmision = models.CharField ('Trasmision del motovehiculo', max_length= 200 , blank= False, null= False)
-   color = models.CharField ('Color del motovehicuio', max_length= 100 , blank= False , null= False)   
-     
+   trasmision = models.CharField ('Trasmision del motovehiculo', default= "", max_length= 200 , blank= False, null= False)
+   color = models.CharField ('Color del motovehicuio', default= "", max_length= 100 , blank= False , null= False)   
+   Marca = models.CharField('Marca del motovehiculo', default="", max_length= 100, blank= False, null=False)
+
+
