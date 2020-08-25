@@ -30,4 +30,10 @@ class Motovehiculo (models.Model):
    color = models.CharField ('Color del motovehicuio', default= "", max_length= 100 , blank= False , null= False)   
    Marca = models.CharField('Marca del motovehiculo', default="", max_length= 100, blank= False, null=False)
 
+   class meta:
+      verbose_name = 'Motovehiculo'
+      verbose_name_plural = 'Motovehiculos'
+      ordering = ['marca']
 
+   def __str__(self):
+      return self.patente
