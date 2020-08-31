@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
 def Home (request):
-    return render(request,'clientes/index.html')
+    return render(request,'index.html')
+
